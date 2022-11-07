@@ -21,6 +21,8 @@ import './styles/styles.scss';
 
 const store = configureStore()
 
+console.log("Test")
+
 const jsx = (
     <Provider store={store}>
         <AppRouter />
