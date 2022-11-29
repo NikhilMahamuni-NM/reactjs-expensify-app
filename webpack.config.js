@@ -38,11 +38,10 @@ module.exports = (env, options) => {
         plugins: [
             new ExtractTextPlugin({filename: 'styles.css'})
         ],
-        devtool : isProduction ? 'source-map' : 'inline-source-map',
+        devtool : isProduction ? 'source-map' : 'eval-cheap-module-source-map',
         devServer : {
             static: {
                 directory: path.join(__dirname, 'public'),
-                publicPath: '/dist/'
             },
             historyApiFallback: true,
             
